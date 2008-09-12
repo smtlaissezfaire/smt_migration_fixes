@@ -1,0 +1,17 @@
+# rcov coverage:
+coverage
+
+# text editor project files:
+*.tmproj
+*.emproj
+*.emacs-project
+
+# emacs files:
+*~
+*#*
+
+# mac os x files:
+.DS_Store
+
+# ignore emacs TAGS file
+TAGS
