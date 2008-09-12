@@ -1,13 +1,18 @@
-SmtMigrationFixes
+SMTMigrationFixes
 =================
 
-Introduction goes here.
+Having problems with your migrations because of outdated column information?
+Are you seeing errors like the following?
 
+Mysql::Error: Unknown column 'events.is_temporary' in 'field list': SELECT `events`.`id` ...
 
-Example
+By default, ActiveRecord caches the column information. Installing this plugin
+will invalidate that cache for each migration run.
+
+Thanks
 =======
 
-Example goes here.
+This plugin is based on a patch to ActiveRecord from
+http://dev.rubyonrails.org/ticket/9436.
 
-
-Copyright (c) 2008 [name of plugin creator], released under the MIT license
+Copyright (c) 2008 Scott Taylor <scott@railsnewbie.com>, released under the MIT & GPL licenses.
