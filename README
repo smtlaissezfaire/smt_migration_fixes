@@ -9,6 +9,26 @@ Mysql::Error: Unknown column 'events.is_temporary' in 'field list': SELECT `even
 By default, ActiveRecord caches the column information. Installing this plugin
 will invalidate that cache for each migration run.
 
+Installation
+============
+
+Without submodules:
+
+  git clone git://github.com/smtlaissezfaire/smt_migration_fixes.git vendor/plugins/smt_migration_fixes
+  cd vendor/plugins/smt_migration_fixes
+  rm -rf .git
+  cd -
+  git add vendor/plugins/smt_migration_fixes
+  git commit -m "* Added smt_migration_fixes on submodules"
+
+Under submodules:
+
+  git submodule add git://github.com/smtlaissezfaire/smt_migration_fixes.git vendor/plugins/smt_migration_fixes
+  git commit -a -m "* Added smt_migration_fixes on submodules"  # commit...
+  git submodule init
+  git submodule update
+
+
 Thanks
 =======
 
