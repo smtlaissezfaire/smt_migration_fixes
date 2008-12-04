@@ -1,6 +1,13 @@
 # SMTMigrationExtensions  Copyright (C) 2008 Scott Taylor <scott@railsnewbie.com>
 module SMT
   module MigrationFixes
+    
+    MAJOR = 1
+    MINOR = 0
+    TINY  = 0
+    
+    VERSION = "#{MAJOR}.#{MINOR}.#{TINY}"
+    
     module MigrationMethods
       def self.extended(other_mod)
         other_mod.instance_eval do
