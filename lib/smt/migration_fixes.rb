@@ -12,11 +12,14 @@ module SMT
       def self.extended(other_mod)
         other_mod.instance_eval do
           class << self
-            alias_method :old_migrate, :migrate
+            unless instance_methods.include?("old_migrate")
+              alias_method :old_migrate, :migrate
             
-            def migrate(*args, &blk)
-              old_migrate(*args, &blk)
-              reset_class_information
+              def migrate(*args, &blk)
+                result = old_migrate(*args, &blk)
+                reset_class_information
+                result
+              end
             end
           end
         end
